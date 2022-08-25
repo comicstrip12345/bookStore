@@ -1,13 +1,387 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav {
+  background-color: white;
+}
+header nav h1 {
+  font-family: Poppins;
+  font-weight: 800;
+  color: black;
+  font-size: 1.4vw;
+}
+header nav h1 span {
+  color: #B100EF;
+}
+header nav ul li a.cart {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+header nav ul li a.cart img {
+  height: 4vh;
+}
+header nav .offcanvas .offcanvas-header h5 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+header nav .offcanvas .offcanvas-body h2 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+header nav .offcanvas .offcanvas-body h3 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+header nav .offcanvas .offcanvas-body .row {
+  margin-bottom: 2vh;
+}
+header nav .offcanvas .offcanvas-body .cartimg img {
+  height: 15vh;
+}
+header nav .offcanvas .offcanvas-body .cartdesc h4 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+  font-size: 1.4vw;
+}
+header nav .offcanvas .offcanvas-body .cartdesc p {
+  font-family: Quicksand;
+  font-weight: 400;
+  color: black;
+}
+header nav .offcanvas .offcanvas-body .cartprice h5 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+header nav .offcanvas .offcanvas-body button.concheck {
+  margin-top: 3vh;
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 2vh;
+  background: none;
+  border: none;
+  background-color: #B100EF;
+}
+header nav .offcanvas .offcanvas-body button.back {
+  margin-top: 4vh;
+  background-color: white;
+  border: none;
+  float: right;
+}
+header nav .offcanvas .offcanvas-body button.back img {
+  width: 5vh;
+}
+header nav .offcanvas .offcanvas-body button.payment {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2vh;
+  padding: 2vh;
+  margin-bottom: 2vh;
+  width: 100%;
+  text-align: left;
+}
+header nav .offcanvas .offcanvas-body .option-card {
+  border: 1px solid black;
+  border-radius: 2vh;
+  padding: 2vh;
+  margin-bottom: 2vh;
+}
+header nav .offcanvas .offcanvas-body .collapse .card {
+  margin-bottom: 3vh;
+}
+header nav .offcanvas .offcanvas-body .collapse .card form {
+  padding-bottom: 1vh;
+}
+header nav .offcanvas .offcanvas-body .collapse .card form label {
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+}
+header nav .offcanvas .offcanvas-body .collapse .card form input {
+  width: 100%;
+}
+
+article {
+  padding-bottom: 20vh;
+}
+article section.hero {
+  margin-top: 6vh;
+  margin-bottom: 25vh;
+}
+article section.hero .image {
+  margin-top: 20vh;
+}
+article section.hero .image img {
+  height: 50vh;
+}
+article section.hero .details {
+  margin-top: 13vh;
+}
+article section.hero .details h1 {
+  font-family: Poppins;
+  font-weight: 800;
+  color: black;
+  font-size: 4vw;
+}
+article section.hero .details h2 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+  font-size: 2vw;
+}
+article section.hero .details span {
+  color: #B100EF;
+}
+article section.hero .details .featImg img {
+  width: 6vw;
+}
+article section.hero .details .featDesc h5 {
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+}
+article section.books .title {
+  margin-bottom: 5vh;
+}
+article section.books .title h1 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+article section.books .search form {
+  display: inline;
+  float: right;
+}
+article section.books .search form input {
+  height: 6vh;
+  width: 20vw;
+}
+article section.books .search form button {
+  margin-left: 1vw;
+  border: none;
+  background: none;
+  height: 6vh;
+}
+article section.books .search form button i {
+  font-size: 3.5vh;
+  color: #B100EF;
+}
+article section.books .book img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40vh;
+}
+article section.books .book a {
+  text-decoration: none;
+}
+article section.books .book a h5 {
+  margin-top: 3vh;
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+article section.books .book p.author {
+  font-family: Quicksand;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+}
+article section.books .book h6 {
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+article section.books .book button.cart {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 2vh;
+  background: none;
+  border: none;
+  background-color: #B100EF;
+}
+article section.books .book .modal .modal-body {
+  padding-top: 8vh;
+}
+article section.books .book .modal .modal-body h3 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+article section.books .book .modal .modal-body p.modalAuth {
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+}
+article section.books .book .modal .modal-body p.desc {
+  line-height: 5vh;
+}
+article section.books .book .modal .modal-body p.rapr span.discount {
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+}
+article section.books .book .modal .modal-body p.rapr span.price {
+  font-family: Quicksand;
+  font-weight: 400;
+  color: black;
+  text-decoration: line-through;
+}
+article section.books .book .modal .modal-body p {
+  font-family: Quicksand;
+  font-weight: 400;
+  color: black;
+}
+article section.books .book .modal .modal-footer button {
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 2vh;
+  background: none;
+  border: none;
+  background-color: #B100EF;
+}
+article section.success .image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18vh;
+}
+article section.success .details h1 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 5vh;
+}
+article section.success .details h3 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+article section.success .details h4 {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+article section.success .details .cartCard {
+  margin-bottom: 3vh;
+  border: 1px solid black;
+  border-radius: 2vh;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+}
+article section.success .details .cartCard .itemImg img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10vh;
+}
+article section.success .details .cartCard .itemDet h5 {
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+}
+article section.success .details .cartCard .itemDet p {
+  font-family: Quicksand;
+  font-weight: 400;
+  color: black;
+  margin: 0;
+}
+article section.success .details .cartCard .itemPri h5 {
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+}
+article section.success .details .cod {
+  margin-top: 2vh;
+}
+article section.success .details .cod h5 {
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+}
+article section.success .details .cod h5 span {
+  font-family: Quicksand;
+  font-weight: 400;
+  color: black;
+}
+article section.success .details .codAddr p {
+  font-family: Quicksand;
+  font-weight: 400;
+  color: black;
+  font-style: italic;
+}
+
+footer .logo {
+  height: 30vh;
+}
+footer .logo h1 {
+  font-family: Poppins;
+  font-weight: 800;
+  color: black;
+  font-size: 3vw;
+}
+footer .logo h1 span {
+  color: #B100EF;
+}
+footer .why h1 {
+  font-family: Poppins;
+  font-weight: 800;
+  color: black;
+  font-size: 1.5vw;
+}
+footer .why h1 span {
+  color: #B100EF;
+}
+footer .why p {
+  font-family: Quicksand;
+  font-weight: 400;
+  color: black;
+  font-size: 1.1vw;
+}
+footer .options p {
+  margin-bottom: 2vh;
+}
+footer .options p a {
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+}
+footer .miniFooter {
+  background-color: #B100EF;
+}
+footer .miniFooter p {
+  margin: 0;
+  margin-top: 1.3vh;
+  margin-bottom: 1.3vh;
+  font-family: Quicksand;
+  font-weight: 700;
+  color: black;
+  color: white;
+  font-size: 0.8vw;
+  text-align: center;
 }
