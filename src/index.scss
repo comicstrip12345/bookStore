@@ -1,0 +1,384 @@
+@mixin headerExtraBoldTextFont {
+    font-family: Poppins;
+    font-weight: 800;
+    color: black;
+}
+@mixin headerBoldTextFont {
+    font-family: Poppins;
+    font-weight: 700;
+    color: black;
+}
+@mixin textBoldTextFont {
+    font-family: Quicksand;
+    font-weight: 700;
+    color: black;
+}
+@mixin textRegTextFont {
+    font-family: Quicksand;
+    font-weight: 400;
+    color: black;
+}
+@mixin marginCenter {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    nav{
+        background-color: white;
+        h1{
+            @include headerExtraBoldTextFont();
+            font-size: 1.4vw;
+
+            span{
+                color: #B100EF;
+            }
+        }
+        ul{
+            li{
+                a.cart{
+                    @include headerBoldTextFont();
+                    
+                    img{
+                        height: 4vh;
+                    }
+                }
+            }
+        }
+        .offcanvas{
+            .offcanvas-header{
+                h5{
+                    @include headerBoldTextFont();
+                }
+            }
+            .offcanvas-body{
+                h2{
+                    @include headerBoldTextFont()
+                }
+                h3{
+                    @include headerBoldTextFont();
+                }
+                .row{
+                    margin-bottom: 2vh;
+                }
+                .cartimg{
+                    img{
+                        height: 15vh;
+                    }
+                }
+                .cartdesc{
+                    h4{
+                        @include headerBoldTextFont();
+                        font-size: 1.4vw;
+                    }
+                    p{
+                        @include textRegTextFont();
+                    }
+                }
+                .cartprice{
+                    h5{
+                        @include headerBoldTextFont();
+                    }
+                }
+                button.concheck{
+                    margin-top: 3vh;
+                    @include textBoldTextFont();
+                    color: white;
+                    padding: 10px;
+                    border-radius: 2vh;
+                    background: none;
+                    border: none;
+                    background-color: #B100EF;
+                }
+                button.back{
+                    margin-top: 4vh;
+                    background-color: white;
+                    border: none;
+                    float: right;
+                    
+                    img{
+                        width: 5vh;
+                    }
+                }
+                button.payment{
+                    background-color: white;
+                    border: 1px solid black;
+                    border-radius: 2vh;
+                    padding: 2vh;
+                    margin-bottom: 2vh;
+                    width: 100%;
+                    text-align: left;
+                }
+                .option-card{
+                    border: 1px solid black;
+                    border-radius: 2vh;
+                    padding: 2vh;
+                    margin-bottom: 2vh;
+                }
+                .collapse{
+                    .card{
+                        margin-bottom: 3vh;
+
+                        form{
+                            padding-bottom: 1vh;
+
+                            label{
+                                @include textBoldTextFont();
+                            }
+                            input{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+article{
+    padding-bottom: 20vh;
+    section.hero{
+        margin-top: 6vh;
+        margin-bottom: 25vh;
+
+        .image{
+            margin-top: 20vh;
+
+            img{
+                height: 50vh;
+            }
+        }
+        .details{
+            margin-top: 13vh;
+            h1{
+                @include headerExtraBoldTextFont();
+                font-size: 4vw
+            }
+            h2{
+                @include headerBoldTextFont();
+                font-size: 2vw;
+            }
+            span{
+                color: #B100EF;
+            }
+            .featImg{
+                img{
+                    width: 6vw;
+                }
+            }
+            .featDesc{
+                h5{
+                    @include textBoldTextFont();
+                }
+            }
+        }
+    }
+    section.books{
+        .title{
+            margin-bottom: 5vh;
+
+            h1{
+                @include headerBoldTextFont();
+            }
+        }
+        .search{
+            form{
+                display: inline;
+                float: right;
+            }
+        }
+        .book{
+            img{
+                @include marginCenter();
+                height: 40vh;
+            }
+            a{
+                text-decoration: none;
+
+                h5{
+                    margin-top: 3vh;
+                    @include headerBoldTextFont();
+                    text-align: center;
+                }
+            }
+            p.author{
+                @include textRegTextFont();
+                text-align: center;
+            }
+            h6{
+                @include textBoldTextFont();
+                text-align: center;
+            }
+            button.cart{
+                @include marginCenter();
+                @include textBoldTextFont();
+                color: white;
+                padding: 10px;
+                border-radius: 2vh;
+                background: none;
+                border: none;
+                background-color: #B100EF;
+            }
+            .modal{
+                .modal-body{
+                    padding-top: 8vh;
+                    
+                    h3{
+                        @include headerBoldTextFont();
+                    }
+                    p.modalAuth{
+                        @include textBoldTextFont();
+                    }
+                    p.desc{
+                        line-height: 5vh;
+                    }
+                    p.rapr{
+                        span.discount{
+                            @include textBoldTextFont();
+                        }
+                        span.price{
+                            @include textRegTextFont();
+                            text-decoration:line-through;
+                        }
+                    }
+                    p{
+                        @include textRegTextFont();
+                    }
+                }
+                .modal-footer{
+                    button{
+                        @include textBoldTextFont();
+                        color: white;
+                        padding: 10px;
+                        border-radius: 2vh;
+                        background: none;
+                        border: none;
+                        background-color: #B100EF;
+                    }
+                }
+            }
+        }
+        
+    }
+    section.success{
+        .image{
+            img{
+                @include marginCenter();
+                margin-top: 18vh;
+            }
+        }
+        .details{
+            h1{
+                @include headerBoldTextFont();
+                margin-bottom: 5vh;
+            }
+            h3{
+                @include headerBoldTextFont();
+            }
+            h4{
+                @include headerBoldTextFont();
+            }
+            .cartCard{
+                margin-bottom: 3vh;
+                border: 1px solid black;
+                border-radius: 2vh;
+                padding-top: 2.5vh;
+                padding-bottom: 2.5vh;
+
+                .itemImg{
+                    img{
+                        @include marginCenter();
+                        height: 10vh;
+                    }
+                }
+                .itemDet{
+                    h5{
+                        @include textBoldTextFont();
+                    }
+                    p{
+                        @include textRegTextFont();
+                        margin: 0;
+                    }
+                }
+                .itemPri{
+                    h5{
+                        @include textBoldTextFont();
+                    }
+                }
+            }
+            .cod{
+                margin-top: 2vh;
+                h5{
+                    @include textBoldTextFont();
+
+                    span{
+                        @include textRegTextFont();
+                    }
+                }
+            }
+            .codAddr{
+                p{
+                    @include textRegTextFont();
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+footer{
+    .logo{
+        height: 30vh;
+        h1{
+            @include headerExtraBoldTextFont();
+            font-size: 3vw;
+
+            span{
+                color: #B100EF;
+            }
+        }
+    }
+    .why{
+        h1{
+            @include headerExtraBoldTextFont();
+            font-size: 1.5vw;
+
+            span{
+                color: #B100EF;
+            }
+        }
+        p{
+            @include textRegTextFont();
+            font-size: 1.1vw;
+        }
+    }
+    .options{
+        p{
+            margin-bottom: 2vh;
+
+            a{
+                @include textBoldTextFont()
+            }
+        }
+    }
+    .miniFooter{
+        background-color: #B100EF;
+        p{
+            margin: 0;
+            margin-top: 1.3vh;
+            margin-bottom: 1.3vh;
+            @include textBoldTextFont();
+            color: white;
+            font-size: 0.8vw;
+            text-align: center;
+        }
+    }
+}
