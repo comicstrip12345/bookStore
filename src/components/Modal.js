@@ -1,8 +1,6 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 
 const Modal = (props) => {
-    // const user = useSelector((state)=>state.book.user)
     return (
         <div className="modal fade" id={props.id} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-lg">
@@ -24,7 +22,7 @@ const Modal = (props) => {
                         </div>
                     </div>
                     <div className="modal-footer">
-                        <button onClick={props.onClick}>Add to cart</button>
+                        <button value={props.price} onClick={props.onClick}>Add to cart</button>
                         <button data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>

@@ -124,20 +124,16 @@ header{
                     padding: 2vh;
                     margin-bottom: 2vh;
                 }
-                .collapse{
-                    .card{
-                        margin-bottom: 3vh;
-
-                        form{
-                            padding-bottom: 1vh;
-
-                            label{
-                                @include textBoldTextFont();
-                            }
-                            input{
-                                width: 100%;
-                            }
-                        }
+                .noItems{
+                    i{
+                        display: block;
+                        text-align: center;
+                        font-size: 20vh;
+                    }
+                    p{
+                        @include textRegTextFont();
+                        text-align: center;
+                        font-size: 3vh;
                     }
                 }
             }

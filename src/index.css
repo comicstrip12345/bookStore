@@ -100,19 +100,17 @@ header nav .offcanvas .offcanvas-body .option-card {
   padding: 2vh;
   margin-bottom: 2vh;
 }
-header nav .offcanvas .offcanvas-body .collapse .card {
-  margin-bottom: 3vh;
+header nav .offcanvas .offcanvas-body .noItems i {
+  display: block;
+  text-align: center;
+  font-size: 20vh;
 }
-header nav .offcanvas .offcanvas-body .collapse .card form {
-  padding-bottom: 1vh;
-}
-header nav .offcanvas .offcanvas-body .collapse .card form label {
+header nav .offcanvas .offcanvas-body .noItems p {
   font-family: Quicksand;
-  font-weight: 700;
+  font-weight: 400;
   color: black;
-}
-header nav .offcanvas .offcanvas-body .collapse .card form input {
-  width: 100%;
+  text-align: center;
+  font-size: 3vh;
 }
 
 article {
