@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 
 const Success = () => {
     const codDetails = useSelector((state)=>state.book.codDetails)
+    const cardDetails = useSelector((state)=>state.book.cardDetails)
+    const {items,totalPrice} = codDetails
     const codItems = codDetails.items
     const codTotalPrice = codDetails.totalPrice
     return (

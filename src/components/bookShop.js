@@ -5,7 +5,9 @@ const initialState ={
     user: bookData,
     price: [0],
     priceDetails: [],
-    codDetails:[]
+    codDetails:[],
+    cardDetails:[],
+    priceRemoved:0
 }
 
 const bookShop = createSlice({
@@ -21,14 +23,24 @@ const bookShop = createSlice({
         addTotalPrice:(state,action)=>{
             state.totalPrice = action.payload
         },
+        removeCartItemPrice:(state,action)=>{
+            state.priceRemoved = action.payload
+        },
         addCODetails:(state,action)=>{
             state.codDetails = action.payload
         },
-        deleteCartItems:(state)=>{
+        addCarDetails:(state,action)=>{
+            state.cardDetails = action.payload
+        },
+        removeCartItems:(state,action)=>{
+            const updateCartItems =  state.priceDetails.filter((item)=> item.cartId !== action.payload)
+            state.priceDetails = updateCartItems
+        },
+        deleteAllCartItems:(state)=>{
             state.totalPrice = 0
         },
     }
 })
 
 export default bookShop
-export const {addPrice,addPriceDetails,addTotalPrice,deleteCartItems,addCODetails} = bookShop.actions
+export const {addPrice,addPriceDetails,addTotalPrice,removeCartItemPrice,deleteAllCartItems,addCODetails, addCarDetails,removeCartItems} = bookShop.actions

@@ -7,6 +7,36 @@ a {
   color: black;
 }
 
+.ant-popover .ant-popover-content .ant-popover-inner .ant-popover-title {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+.ant-popover .ant-popover-content .ant-popover-inner .ant-popover-inner-content .popover-content {
+  display: block;
+  text-align: center;
+}
+.ant-popover .ant-popover-content .ant-popover-inner .ant-popover-inner-content .popover-content button.add {
+  background: none;
+  border: none;
+  width: 5vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+}
+.ant-popover .ant-popover-content .ant-popover-inner .ant-popover-inner-content .popover-content button.red, .ant-popover .ant-popover-content .ant-popover-inner .ant-popover-inner-content .popover-content button.green {
+  border: none;
+  height: 5vh;
+  width: 4.5vh;
+  color: white;
+  font-size: 3vh;
+}
+.ant-popover .ant-popover-content .ant-popover-inner .ant-popover-inner-content .popover-content button.red {
+  background-color: red;
+}
+.ant-popover .ant-popover-content .ant-popover-inner .ant-popover-inner-content .popover-content button.green {
+  background-color: green;
+}
+
 header nav {
   background-color: white;
 }
@@ -59,10 +89,28 @@ header nav .offcanvas .offcanvas-body .cartdesc p {
   font-weight: 400;
   color: black;
 }
-header nav .offcanvas .offcanvas-body .cartprice h5 {
+header nav .offcanvas .offcanvas-body .cartprice button {
+  float: right;
+  background: none;
+  border: none;
+  color: red;
+}
+header nav .offcanvas .offcanvas-body .cartprice .cartPrice {
+  display: inline;
+  float: right;
+  margin-top: 4vh;
+}
+header nav .offcanvas .offcanvas-body .cartprice .cartPrice h5 {
   font-family: Poppins;
   font-weight: 700;
   color: black;
+}
+header nav .offcanvas .offcanvas-body .cartprice .cartPrice p {
+  font-family: Quicksand;
+  font-weight: 400;
+  color: black;
+  text-align: right;
+  margin: 0;
 }
 header nav .offcanvas .offcanvas-body button.concheck {
   margin-top: 3vh;
@@ -85,7 +133,12 @@ header nav .offcanvas .offcanvas-body button.back {
 header nav .offcanvas .offcanvas-body button.back img {
   width: 5vh;
 }
-header nav .offcanvas .offcanvas-body button.payment {
+header nav .offcanvas .offcanvas-body .accordion .accordion-item h5.accordion-header {
+  font-family: Poppins;
+  font-weight: 700;
+  color: black;
+}
+header nav .offcanvas .offcanvas-body .accordion .accordion-item h5.accordion-header button.payment {
   background-color: white;
   border: 1px solid black;
   border-radius: 2vh;
@@ -94,16 +147,17 @@ header nav .offcanvas .offcanvas-body button.payment {
   width: 100%;
   text-align: left;
 }
-header nav .offcanvas .offcanvas-body .option-card {
+header nav .offcanvas .offcanvas-body .accordion .accordion-body {
   border: 1px solid black;
   border-radius: 2vh;
-  padding: 2vh;
+  padding: 2.5vh;
   margin-bottom: 2vh;
 }
 header nav .offcanvas .offcanvas-body .noItems i {
   display: block;
   text-align: center;
   font-size: 20vh;
+  color: #B100EF;
 }
 header nav .offcanvas .offcanvas-body .noItems p {
   font-family: Quicksand;

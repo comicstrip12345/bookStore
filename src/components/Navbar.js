@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { useSelector } from 'react-redux'
 import CartDetails from './CartDetails';
 
@@ -12,8 +12,7 @@ const Navbar = () => {
                     <ul className='navbar-nav'>
                         <li className='nav-item'>
                             <a className="nav-link cart" data-bs-toggle="offcanvas" href="#cart" role="button" aria-controls="cart">
-                                {/* Cart({price.length}) */}
-                                <img src={require("../images/cart.png")} alt=""/> <sup>{price.length}</sup>
+                                <img src={require("../images/cart.png")} alt="cart"/> <sup>{price.length}</sup>
                             </a>
                         </li>
                     </ul>

@@ -4,17 +4,22 @@ import { addPrice, addPriceDetails } from './bookShop'
 import Modal from './Modal'
 import Swal from 'sweetalert2'
 import { toast,ToastContainer } from 'react-toastify'
+import { Popover } from 'antd'
+import 'antd/dist/antd.css';
 
 const Books = () => {
-    const [book,setBook]=useState("")
+    const [bookValue,setBookValue]=useState(1)
     const [bookSearch,setBookSearch]=useState([])
     const user = useSelector((state)=>state.book.user)
     const dispatch = useDispatch()
+
     const onSubmit=(e)=>{
         e.preventDefault()
-        const filt = user.filter((item)=>e.target.value === item.price)
+        const cartItems = user.filter((item)=>e.target.name === item.title)
+        const cartId = Math.floor(Math.random() * 1000)
+        const updCartItems = cartItems.map((item)=>({...item,updPrice:e.target.value,cartId}))
         dispatch(addPrice(e.target.value))
-        dispatch(addPriceDetails(filt))
+        dispatch(addPriceDetails(updCartItems))
         toast.success('Book added to the cart', {
             position: "top-right",
             autoClose: 1000,
@@ -27,13 +32,23 @@ const Books = () => {
         });
     }
     const onChange=(e)=>{
-        setBook(e.target.value)
-    }
-    const onSearch=(e)=>{
-        e.preventDefault()
-        const searchFilt = user.filter((item)=>book === item.title)
+        const searchFilt = user.filter((item)=>e.target.value.toLowerCase() === '' ? item : item.title.toLowerCase().includes(e.target.value))
         setBookSearch(searchFilt)
     }
+    const onAddBooks=(e)=>{
+        e.preventDefault()
+        setBookValue(bookValue + 1)
+    }
+    const onRemoveBooks=(e)=>{
+        e.preventDefault()
+        setBookValue(bookValue - 1)
+        if(bookValue === 1){
+            setBookValue(1)
+        }
+    }
+    // const content = (
+        
+    // )
     return (
         <section className='books'>
             <div className='container'>
@@ -42,9 +57,8 @@ const Books = () => {
                         <h1>Books</h1>
                     </div>
                     <div className='col-6 search'>
-                        <form onSubmit={onSearch}>
+                        <form>
                             <input type="text" onChange={onChange}/>
-                            <button>Search</button>
                         </form>
                     </div>
                     {bookSearch == 0 ? 
@@ -56,7 +70,19 @@ const Books = () => {
                                 <p className='author'>by {item.author}</p>
                                 <h6>P{item.price}.00</h6>
                             </a>
-                            <button className='cart' value={item.price} onClick={onSubmit}>Add to cart</button>
+                            <Popover 
+                                content={(
+                                    <div className='popover-content'>
+                                        <button className='red' onClick={onRemoveBooks}>-</button>
+                                        <button className='add' name={item.title} value={item.price * bookValue} onClick={onSubmit}>{bookValue}</button>
+                                        <button className='green' onClick={onAddBooks}>+</button>
+                                    </div>
+                                )} 
+                                title='How many books you want?' 
+                                trigger='click'
+                            >
+                                <button className='cart'>Add to cart</button>
+                            </Popover>
                             <Modal 
                                 id={`exampleModal${index}`} 
                                 title={item.title} 

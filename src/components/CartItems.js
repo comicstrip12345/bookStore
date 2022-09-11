@@ -1,6 +1,15 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { removeCartItems,removeCartItemPrice } from './bookShop'
 
-const CartItems = ({images,title,author,price}) => {
+const CartItems = ({images,title,author,price,updPrice,id}) => {
+    const dispatch = useDispatch()
+
+    const onRemoveItems=(e)=>{
+        e.preventDefault()
+        dispatch(removeCartItems(id))
+        dispatch(removeCartItemPrice(updPrice))
+    }
     return (
         <div className='row'>
             <div className='col-3 cartimg'>
@@ -11,7 +20,11 @@ const CartItems = ({images,title,author,price}) => {
                 <p>{author}</p>
             </div>
             <div className='col-4 cartprice'>
-                <h5>P{price}.00</h5>
+                <button onClick={onRemoveItems}><i class="bi bi-x-lg"></i></button>
+                <div className='cartPrice'>
+                    <p>{price} x {updPrice / price}</p>
+                    <h5>P{updPrice}.00</h5>
+                </div>
             </div>
         </div>
     )
